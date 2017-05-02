@@ -11,7 +11,7 @@ class Vote < ActiveRecord::Base
       {:id => 4, :name => 'Fandromeda', :logo => 'site-logo/fandromeda.png', :path => 'fandromeda'},
       {:id => 5, :name => 'CricBattle', :logo => 'site-logo/cricbattle.png', :path => 'cricbattle'}, 
       {:id => 6, :name => 'Cricketinc', :logo => 'site-logo/cricketinc.png', :path => 'cricketinc'}, 
-      {:id => 7, :name => 'DailyFantasyCricket', :logo => 'site-logo/daily-fantasy-cricket.png', :path => 'daily-fantasy-cricket'}
+      {:id => 7, :name => 'DailyFantasy Cricket', :logo => 'site-logo/daily-fantasy-cricket.png', :path => 'daily-fantasy-cricket'}
     ]
 
 end
