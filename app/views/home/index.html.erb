@@ -2,22 +2,31 @@
 
 <div class="mart10">
   <% @options.each do |o| %>
-  <%= link_to o[:path] do %>
-    <div class="ftl pad20" style="width: 72px;height: 72px;">
+    <div class="ftl pad20" style="width: 72px;height: 100px;">
       <table align="center" width="100%">
         <tr>
           <td>
-            <%= image_tag o[:logo], :width => '98%' %>
+            <%= link_to o[:path] do %>
+              <%= image_tag o[:logo], :width => '98%' %>
+            <% end %> 
           </td>
         </tr>
         <tr>
-          <td>
-            <div class="font13 pad10"><%= o[:name] %></div>
+          <td align="center">
+            <%= link_to o[:path] do %>
+              <div class="font13 pad10"><%= o[:name] %></div>
+            <% end %> 
+          </td>
+        </tr>
+        <tr>
+          <td align="center">
+            <div class="font13 sky">
+              <%= link_to 'Website', o[:site], :target => '_blank' %>
+            </div>
           </td>
         </tr>
       </table>
     </div>
- <% end %> 
   <% end %>
 </div>
 <div class="clr"></div>
