@@ -1,0 +1,9 @@
+<% flash.each do |name, msg| %>
+  <div style="position: absolute;z-index:10" class="w100 txt-center">
+    <div class="<%= name == 'notice' ? "bgsuccess" : "bgdanger" %>">
+      <div class="white pad10 bold font12">
+        <%= msg  %>
+      </div>
+    </div>
+  </div>
+ <% end %>

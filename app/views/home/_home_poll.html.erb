@@ -1,0 +1,14 @@
+<div class="w100 bgwhite round shadow mart20">
+  <div class="pad20 padl40 padr40">
+    <div class="font15"><h1 class="graydark">What is the best site to play fantasy cricket?</h1></div>
+    <div id='js-container'>
+      <% if @vote.present? %>
+        <%= render 'home/result' %>
+      <% else %>
+        <div class="pad10 font14 graymedium">
+          <%= render 'votes/form' %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,5 @@
+<% if @error.present? %>
+  $('#js-error').text('<%= @error %>');
+<% else %>
+  $('#js-container').html('<%= escape_javascript(render "home/result") %>');
+<% end %>

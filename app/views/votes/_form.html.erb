@@ -1,0 +1,12 @@
+<div id='js-error' class="danger font8"></div>
+<div class="graylight font9">OPTIONS</div>
+<%= form_for Vote.new, :remote => true do |f| %>
+  <% @options.each do |o| %>
+    <div class="pad5">
+      <%= f.radio_button :option_id, o[:id]  %> <%= o[:name] %>
+    </div>
+  <% end %>
+  <div>
+    <%= f.submit 'sumbit', :class => 'bgsky white font12 round2 pad5 padl10 padr10 shadow mar10 border-none' %>
+  </div>
+<% end %>

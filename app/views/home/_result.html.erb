@@ -1,0 +1,23 @@
+<div class="font12 graymedium">
+  <table width="100%" cellpadding="0" cellspacing="5">
+    <% @options.each do |o| %>
+      <% width = @result[o[:id]].to_i*100/@total_votes %>
+      <tr>
+        <td width="80%">
+          <% if @vote.option_id == o[:id] %>
+            <div class="pad8 bgsky white round2" style="width: <%=  20 + width %>%;">
+              <%= link_to o[:name], o[:path] %> <span class="font7">(vote)</span>
+            </div>
+          <% else %>
+            <div class="pad8 bglightblue round2" style="width: <%= 20 + width %>%;">
+              <%= link_to o[:name], o[:path] %>
+            </div>
+          <% end %>
+        </td>
+        <td align="right">
+          <b><%= width %>%</b> (<%= @result[o[:id]].to_i %> votes)
+        </td>
+      </tr>
+    <% end %>
+  </table>
+</div>

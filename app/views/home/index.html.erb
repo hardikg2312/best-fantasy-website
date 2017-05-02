@@ -1,0 +1,53 @@
+<%= render 'home/home_poll' %>
+
+<div class="mart10">
+  <% @options.each do |o| %>
+  <%= link_to o[:path] do %>
+    <div class="ftl pad20" style="width: 72px;height: 72px;">
+      <table align="center" width="100%">
+        <tr>
+          <td>
+            <%= image_tag o[:logo], :width => '98%' %>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div class="font13 pad10"><%= o[:name] %></div>
+          </td>
+        </tr>
+      </table>
+    </div>
+ <% end %> 
+  <% end %>
+</div>
+<div class="clr"></div>
+
+<div class="w100 bgwhite round shadow mart20">
+  <div class="w100 bglight">
+    <div class="pad20 font15 graymedium">Write your review</div>
+  </div>
+  <div>
+    <%= form_for @review do |f| %>
+      <div class="pad10">
+        <%= f.text_area 'review_text', :class => 'w100 border-none font14 textarea', :rows => 6, :placeholder => 'start writing...'%>
+      </div>
+      <div>
+        <%= f.submit 'Sumbit', :class => 'bgsky white font15 round2 pad5 marl20 padl10 padr10 shadow mar10 border-none' %>
+      </div>
+    <% end %>
+  </div>
+</div>
+
+
+<% @reviews.each do |r| %>
+  <div class="w100 bgwhite round shadow mart20">
+    <div class="w100 bglight">
+      <div class="pad10 font12 graylight"><%= r.created_at.strftime("%b %e, %a %l:%M %p") %></div>
+    </div>
+    <div class="font15 graydark pad8 padl20">
+      <%= r.review_text %>
+    </div>
+  </div>
+<% end %>
+
+<div class="marb40"></div>

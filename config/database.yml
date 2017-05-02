@@ -1,0 +1,8 @@
+# SQLite version 3.x
+#   gem install sqlite3-ruby (not necessary on OS X Leopard)
+development:
+  adapter: postgresql
+  host: localhost
+  database: best_fantasy_website
+  username: hardik
+  password: hardik
