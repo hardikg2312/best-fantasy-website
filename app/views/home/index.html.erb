@@ -44,8 +44,8 @@
     <div class="w100 bglight">
       <div class="pad10 font12 graylight"><%= r.created_at.strftime("%b %e, %a %l:%M %p") %></div>
     </div>
-    <div class="font15 graydark pad8 padl20">
-      <%= r.review_text %>
+    <div class="font15 graydark pad20">
+      <%= r.review_text.gsub(/\n/, '<br/>').html_safe %>
     </div>
   </div>
 <% end %>
